@@ -1,0 +1,95 @@
+@charset "utf-8";
+@font-face {
+	font-family: 'icomoon';
+	src: url('../fonts/icomoon.eot?bc2aqo');
+	src: url('../fonts/icomoon.eot?bc2aqo#iefix') format('embedded-opentype'),  url('../fonts/icomoon.ttf?bc2aqo') format('truetype'),  url('../fonts/icomoon.woff?bc2aqo') format('woff'),  url('../fonts/icomoon.svg?bc2aqo#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: #333;
+}
+#box {
+	position: absolute;
+	overflow: hidden;
+	width: 200px;
+	background-color: #fff;
+	border: 1px solid rgba(0, 0, 0, .3);
+	border-radius: 5px;
+	box-sizing: border-box;
+	box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, .3);
+}
+#box li {
+	display: block;
+	width: 300px;
+	height: 35px;
+	line-height: 35px;
+	padding-left: 40px;
+}
+#box li:hover {
+	background-color: #eee;
+}
+#box li:nth-child(2) {
+	border-bottom: 1px solid #dadada;
+}
+.return {
+	position: relative;
+}
+.return::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '\ea40';
+	font-family: 'icomoon';
+	font-weight: 400;
+	color: #333;
+	padding-left: 10px;
+}
+.go {
+	position: relative;
+}
+.go::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '\ea3c';
+	font-family: 'icomoon';
+	font-weight: 400;
+	color: #333;
+	padding-left: 10px;
+}
+.reflesh {
+	position: relative;
+}
+.reflesh::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '\e984';
+	font-family: 'icomoon';
+	font-weight: 400;
+	color: #333;
+	padding-left: 10px;
+}
+.download {
+	position: relative;
+}
+.download::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '\e900';
+	font-family: 'icomoon';
+	font-weight: 400;
+	color: #333;
+	padding-left: 10px;
+}
