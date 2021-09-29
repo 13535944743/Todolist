@@ -3,6 +3,7 @@ body {
   padding: 0;
   background-color: #cdcdcd;
   font-size: 16px;
+  min-width: 300px;
 }
 
 header {
@@ -11,8 +12,8 @@ header {
 }
 
 section {
-  width: 600px;
-  margin: 0 auto;
+  max-width: 600px;
+  padding: 0;
 }
 
 label {
@@ -22,21 +23,24 @@ label {
   font-size: 24px;
   color: #ddd;
   cursor: pointer;
+  padding: 0 2%;
 }
 
 header input {
   float: right;
-  width: 60%;
+  width: 50%;
   height: 24px;
   margin-top: 12px;
   border-radius: 8px;
   border: none;
   text-indent: 10px;
   outline: none;
+  margin-right: 2%;
 }
 
 h2 {
   position: relative;
+  padding: 0 2%;
 }
 
 span {
@@ -71,7 +75,7 @@ li {
 }
 
 li input {
-  position: absolute;
+  position: absolute !important;
   top: 2px;
   left: 10px;
   width: 22px;
@@ -85,6 +89,7 @@ li p {
 }
 
 li a {
+  box-sizing: content-box;
   position: absolute;
   top: 4px;
   right: 6px;
