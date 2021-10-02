@@ -1,4 +1,6 @@
 $(function () {
+    let flag = true;
+
     load();
 
     $("#title").on("keypress", function (e) {
@@ -94,11 +96,12 @@ $(function () {
 
     // })
 
-    var p = $("li p");
+    const p = $("li p");
     $.each(p, function (i, ele) {
-        let flag = true;
+        let flag = true;    //用来解决点击计划，准备修改时，再次点击时还会触发的bug
+        let flag1 = true;   //用来解决点击计划，变为input，之后input失去焦点时会跟着再次触发p的click事件的bug
         $(ele).on("click", function () {
-            if (flag) {
+            if (flag && flag1) {
                 var inner = $(this).html();
                 $(this).html("<input type='text' class='p'>");
                 let ipt = $(this).children()[0];
@@ -106,7 +109,7 @@ $(function () {
                 $(ipt).select();
                 flag = false;
             }
-
+            flag1 = true;
         });
         $(ele).on("blur", "input", function () {
             let data = getData();
@@ -115,6 +118,7 @@ $(function () {
             saveData(data);
             $(ele).html($(this).val());
             flag = true;
+            flag1 = false;
             // load();
         })
         $(ele).on("keyup", "input", function (e) {
@@ -128,6 +132,12 @@ $(function () {
         //     e.preventDefault();
         // })
 
+    })
+
+    const clearall = $(".clearall");
+    clearall.click(function () {
+        saveData([]);
+        load();
     })
 
 })
